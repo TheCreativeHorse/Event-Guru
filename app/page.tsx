@@ -619,12 +619,7 @@ export default function HomePage() {
       </section>
 
       {/* ── PHOTO STRIP ── */}
-      <div
-        className="grid h-[200px] md:h-[380px]"
-        style={{
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-        }}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-4 md:h-[380px] md:grid-rows-1">
         {[
           {
             src: "/images/events/photo-strip-birthday-ai.png",
@@ -648,8 +643,8 @@ export default function HomePage() {
           },
         ].map((photo, i) => (
           <div
-            key={i}
-            className="home-zoom-wrap-wide relative overflow-hidden"
+            key={photo.src}
+            className="home-zoom-wrap-wide relative aspect-[16/10] w-full overflow-hidden md:aspect-auto md:h-full md:min-h-0"
           >
             <Image
               src={photo.src}
@@ -657,7 +652,7 @@ export default function HomePage() {
               fill
               className="home-zoom-img"
               style={{ objectFit: "cover" }}
-              sizes="(max-width: 768px) 50vw, 25vw"
+              sizes="(max-width: 767px) 100vw, 25vw"
             />
             <div
               style={{

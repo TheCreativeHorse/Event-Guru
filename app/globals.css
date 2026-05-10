@@ -139,16 +139,18 @@ html {
   transition: transform 0.6s ease;
 }
 
-.home-zoom-wrap:hover .home-zoom-img {
-  transform: scale(1.04);
+@media (hover: hover) and (min-width: 768px) {
+  .home-zoom-wrap:hover .home-zoom-img {
+    transform: scale(1.04);
+  }
+
+  .home-zoom-wrap-wide:hover .home-zoom-img {
+    transform: scale(1.06);
+  }
 }
 
 .home-zoom-wrap-wide .home-zoom-img {
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.home-zoom-wrap-wide:hover .home-zoom-img {
-  transform: scale(1.06);
 }
 
 /* Testimonial card bottom accent on hover */
