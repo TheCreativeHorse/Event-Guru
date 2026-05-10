@@ -296,14 +296,13 @@ export default function HomePage() {
               }}
             >
               <div
-                className="home-zoom-wrap relative h-[min(72vw,340px)] md:h-[300px]"
+                className="home-zoom-wrap relative h-[380px] w-full bg-[#EDEAE4] md:h-[300px] md:bg-transparent"
               >
                 <Image
                   src={card.img}
                   alt={card.alt}
                   fill
-                  className="home-zoom-img object-[center_22%] md:object-center"
-                  style={{ objectFit: "cover" }}
+                  className="home-zoom-img object-contain object-center md:object-cover"
                   sizes="(max-width: 900px) 100vw, 33vw"
                 />
               </div>

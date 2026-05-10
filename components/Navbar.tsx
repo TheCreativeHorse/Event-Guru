@@ -14,6 +14,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -30,7 +31,10 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", onResize);
   }, [mobileOpen]);
 
-  const closeMobile = () => setMobileOpen(false);
+  const closeMobile = () => {
+    setMobileOpen(false);
+    setMobileServicesOpen(false);
+  };
 
   return (
     <nav
@@ -122,6 +126,8 @@ export default function Navbar() {
           >
             <button
               type="button"
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
               style={{
                 fontFamily: "var(--font-inter)",
                 fontSize: "13px",
@@ -136,6 +142,8 @@ export default function Navbar() {
                 display: "flex",
                 alignItems: "center",
                 gap: "6px",
+                padding: 0,
+                lineHeight: 1,
               }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.color = "#C9A96E")
@@ -145,7 +153,17 @@ export default function Navbar() {
               }
             >
               Services
-              <span style={{ fontSize: "8px", opacity: 0.5 }}>▼</span>
+              <span
+                aria-hidden
+                style={{
+                  fontSize: "10px",
+                  opacity: 0.45,
+                  transform: servicesOpen ? "rotate(180deg)" : "none",
+                  transition: "transform 0.2s",
+                }}
+              >
+                ▼
+              </span>
             </button>
 
             {servicesOpen ? (
@@ -241,6 +259,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
+            className="inline-flex items-center justify-center whitespace-nowrap"
             style={{
               fontFamily: "var(--font-inter)",
               fontSize: "11px",
@@ -250,8 +269,10 @@ export default function Navbar() {
               color: "#0F0F0F",
               backgroundColor: "#C9A96E",
               padding: "12px 24px",
+              lineHeight: 1,
               textDecoration: "none",
               transition: "background 0.3s",
+              textAlign: "center",
             }}
             onMouseEnter={(e) =>
               (e.currentTarget.style.backgroundColor = "#B8955A")
@@ -264,20 +285,23 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex min-w-0 items-center gap-2 md:hidden">
           <Link
             href="/contact"
             onClick={closeMobile}
+            className="inline-flex max-w-[calc(100vw-11rem)] shrink items-center justify-center whitespace-nowrap"
             style={{
               fontFamily: "var(--font-inter)",
               fontSize: "10px",
               fontWeight: 400,
-              letterSpacing: "0.2em",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
               color: "#0F0F0F",
               backgroundColor: "#C9A96E",
-              padding: "10px 14px",
+              padding: "10px 16px",
+              lineHeight: 1,
               textDecoration: "none",
+              textAlign: "center",
             }}
           >
             GET A QUOTE
@@ -334,30 +358,46 @@ export default function Navbar() {
           >
             Portfolio
           </Link>
-          <div
-            className="border-b border-white/10 px-6 py-3 font-sans text-[10px] uppercase tracking-[0.22em]"
+          <button
+            type="button"
+            aria-expanded={mobileServicesOpen}
+            className="flex w-full items-center justify-between border-b border-white/10 px-6 py-4 text-left font-sans text-xs uppercase tracking-[0.15em]"
             style={{
               fontFamily: "var(--font-inter)",
-              color: "#C9A96E",
+              color: "rgba(255,255,255,0.95)",
+              background: "none",
+              cursor: "pointer",
             }}
+            onClick={() => setMobileServicesOpen((o) => !o)}
           >
             Services
-          </div>
-          {serviceLinks.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="block border-b border-white/10 px-6 py-3.5 pl-10 font-sans text-xs uppercase tracking-[0.12em]"
+            <span
+              aria-hidden
+              className="text-[10px] opacity-70 transition-transform duration-200"
               style={{
-                fontFamily: "var(--font-inter)",
-                color: "rgba(255,255,255,0.92)",
-                textDecoration: "none",
+                transform: mobileServicesOpen ? "rotate(180deg)" : "rotate(0deg)",
               }}
-              onClick={closeMobile}
             >
-              {item.label}
-            </Link>
-          ))}
+              ▼
+            </span>
+          </button>
+          {mobileServicesOpen
+            ? serviceLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block border-b border-white/10 px-6 py-3.5 pl-10 font-sans text-xs uppercase tracking-[0.15em]"
+                  style={{
+                    fontFamily: "var(--font-inter)",
+                    color: "rgba(255,255,255,0.92)",
+                    textDecoration: "none",
+                  }}
+                  onClick={closeMobile}
+                >
+                  {item.label}
+                </Link>
+              ))
+            : null}
           <Link
             href="/contact"
             className="block px-6 py-4 font-sans text-xs uppercase tracking-[0.15em]"
