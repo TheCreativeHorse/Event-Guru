@@ -82,7 +82,7 @@ export default function HostessPage() {
           }}>The welcoming face of your event.</h2>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '1px',
             backgroundColor: '#D4CFC8',
           }}>

@@ -134,7 +134,12 @@ export default function HomePage() {
             Available 7 days a week
           </p>
 
-          <div className="mt-8 grid w-full grid-cols-2 gap-x-6 gap-y-8 border-t border-white/20 pt-8 md:mt-8 md:w-fit md:grid-cols-4 md:gap-0">
+          <div
+            className="mt-8 grid w-full gap-x-6 gap-y-8 border-t border-white/20 pt-8 md:mt-8 md:w-fit md:gap-0"
+            style={{
+              gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+            }}
+          >
             {[
               { value: "50+", label: "Events Completed" },
               { value: "12hr", label: "Quote Response" },
@@ -252,7 +257,12 @@ export default function HomePage() {
 
       {/* ── SERVICE CARDS ── */}
       <section className="bg-[#F2EFE9] px-6 pb-16 md:px-[60px] md:pb-[120px]">
-        <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-px bg-[#D4CFC8] md:grid-cols-3">
+        <div
+          className="mx-auto grid max-w-[1200px] gap-px bg-[#D4CFC8]"
+          style={{
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          }}
+        >
           {[
             {
               num: "01",
@@ -397,7 +407,12 @@ export default function HomePage() {
             Show up to a great event.
           </h2>
 
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-16 lg:gap-20 xl:gap-[80px]">
+          <div
+            className="grid gap-12 md:gap-16 lg:gap-20 xl:gap-[80px]"
+            style={{
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            }}
+          >
             {[
               {
                 n: "01",
@@ -478,7 +493,12 @@ export default function HomePage() {
       </section>
 
       {/* ── SPLIT — WHY EVENT GURU ── */}
-      <section className="grid min-h-0 grid-cols-1 md:grid-cols-2 md:min-h-[600px]">
+      <section
+        className="grid min-h-0 md:min-h-[600px]"
+        style={{
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+        }}
+      >
         <div className="relative min-h-[300px] overflow-hidden md:min-h-[600px]">
           <Image
             src="/images/events/event-staff-team-toronto.jpg"
@@ -603,7 +623,12 @@ export default function HomePage() {
       </section>
 
       {/* ── PHOTO STRIP ── */}
-      <div className="grid h-[200px] grid-cols-2 md:h-[380px] md:grid-cols-4">
+      <div
+        className="grid h-[200px] md:h-[380px]"
+        style={{
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+        }}
+      >
         {[
           {
             src: "/images/events/photo-strip-birthday-ai.png",
@@ -704,7 +729,12 @@ export default function HomePage() {
             What hosts across the GTA say.
           </h2>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-8">
+          <div
+            className="grid gap-8 md:gap-8"
+            style={{
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            }}
+          >
             {[
               {
                 text: "We hired Event Guru for my daughter&apos;s birthday party — 2 servers for 4 hours. They were on time, friendly, and cleaned up at the end. My guests kept asking where I found them.",
@@ -795,7 +825,12 @@ export default function HomePage() {
 
       {/* ── CITIES ── */}
       <section className="bg-[#F2EFE9] px-6 py-16 md:px-[60px] md:py-20">
-        <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 border-t border-[#E5E0D8] pt-12 md:grid-cols-2 md:gap-20 md:items-start md:pt-[72px]">
+        <div
+          className="mx-auto grid max-w-[1200px] gap-12 border-t border-[#E5E0D8] pt-12 md:gap-20 md:items-start md:pt-[72px]"
+          style={{
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          }}
+        >
           <div>
             <p
               style={{

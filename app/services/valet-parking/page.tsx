@@ -65,7 +65,7 @@ export default function ValetParkingPage() {
       </section>
 
       {/* SPLIT — IMAGE + CONTENT */}
-      <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '560px' }}>
+      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', minHeight: '560px' }}>
         <div style={{ position: 'relative', overflow: 'hidden' }}>
           <Image
             src="/images/events/valet-parking-service-toronto.jpg"
@@ -158,7 +158,7 @@ export default function ValetParkingPage() {
           }}>Simple from start to finish.</h2>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
             gap: '48px',
           }}>
             {[
@@ -240,7 +240,7 @@ export default function ValetParkingPage() {
           }}>Valet parking for any occasion.</h2>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '1px',
             backgroundColor: '#D4CFC8',
           }}>

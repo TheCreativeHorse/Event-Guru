@@ -68,7 +68,7 @@ export default function PortfolioPage() {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '1px',
             backgroundColor: '#D4CFC8',
           }}>

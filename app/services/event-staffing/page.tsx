@@ -72,7 +72,7 @@ export default function EventStaffingPage() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '80px',
             alignItems: 'center',
           }}>
@@ -163,7 +163,7 @@ export default function EventStaffingPage() {
           }}>Staff for every type of event.</h2>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '1px',
             backgroundColor: '#E5E0D8',
           }}>
@@ -217,7 +217,7 @@ export default function EventStaffingPage() {
             color: '#0F0F0F',
             marginBottom: '48px',
           }}>Specific staffing needs?</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
             {[
               {
                 title: 'Serving Staff',

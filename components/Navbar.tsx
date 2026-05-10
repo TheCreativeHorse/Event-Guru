@@ -56,7 +56,12 @@ export default function Navbar() {
       >
         <Link href="/" style={{ textDecoration: "none" }} onClick={closeMobile}>
           <div
-            style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              lineHeight: 1,
+              whiteSpace: "nowrap",
+            }}
           >
             <span
               style={{

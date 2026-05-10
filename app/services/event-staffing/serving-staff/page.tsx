@@ -81,7 +81,7 @@ export default function ServingStaffPage() {
           }}>Attentive service from start to finish.</h2>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '1px',
             backgroundColor: '#D4CFC8',
           }}>
