@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const events = [
   { img: '/images/events/event-venue-setup-toronto.jpg', title: 'Outdoor Wedding Reception', location: 'Toronto, ON', type: 'Wedding' },
-  { img: '/images/events/banquet-event-staffing-toronto.jpg', title: 'Corporate Banquet', location: 'Mississauga, ON', type: 'Corporate Event' },
+  { img: '/images/events/photo-strip-corporate-ai.png', title: 'Corporate Networking Event', location: 'Mississauga, ON', type: 'Corporate Event' },
   { img: '/images/events/tent-event-setup-toronto.jpg', title: 'Tent Gala Event', location: 'Oakville, ON', type: 'Private Party' },
   { img: '/images/events/wedding-event-setup-gta.jpg', title: 'Garden Wedding', location: 'Brampton, ON', type: 'Wedding' },
   { img: '/images/events/tent-banquet-setup-gta.jpg', title: 'Banquet Dinner', location: 'Toronto, ON', type: 'Corporate Event' },
