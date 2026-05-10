@@ -9,8 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        charcoal: "var(--color-charcoal)",
+        gold: "var(--color-gold)",
+        "gold-light": "var(--color-gold-light)",
+        offwhite: "var(--color-offwhite)",
+        midgrey: "var(--color-midgrey)",
+        white: "var(--color-white)",
+        footer: "#111111",
+      },
+      fontFamily: {
+        heading: ["var(--font-cormorant)", "ui-serif", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
     },
   },
