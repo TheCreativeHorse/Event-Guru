@@ -66,23 +66,35 @@ export default function PortfolioPage() {
       {/* GRID */}
       <section style={{ backgroundColor: '#F2EFE9', padding: '80px 60px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '1px',
-            backgroundColor: '#D4CFC8',
-          }}>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-4">
             {events.map((event, i) => (
-              <div key={i} style={{ backgroundColor: '#F2EFE9', overflow: 'hidden' }}>
-                <div style={{ position: 'relative', height: '280px', overflow: 'hidden' }}>
-                  <Image
-                    src={event.img}
-                    alt={`${event.title} - Event Guru ${event.location}`}
-                    fill
-                    style={{ objectFit: 'cover', transition: 'transform 0.6s ease' }}
-                    quality={85}
-                  />
-                </div>
+              <div
+                key={`${event.img}-${event.title}`}
+                style={{
+                  backgroundColor: '#F2EFE9',
+                  overflow: 'hidden',
+                  minWidth: 0,
+                  width: '100%',
+                  border: '1px solid #D4CFC8',
+                }}
+              >
+                <Image
+                  src={event.img}
+                  alt={`${event.title} - Event Guru ${event.location}`}
+                  width={900}
+                  height={675}
+                  sizes="(max-width: 767px) 100vw, 33vw"
+                  style={{
+                    width: '100%',
+                    height: '280px',
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    display: 'block',
+                    backgroundColor: '#F2EFE9',
+                    transition: 'transform 0.6s ease',
+                  }}
+                  quality={85}
+                />
                 <div style={{ padding: '24px' }}>
                   <span style={{
                     fontFamily: 'var(--font-inter)',

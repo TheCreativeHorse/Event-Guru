@@ -41,9 +41,7 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 1000,
-        backgroundColor: scrolled
-          ? "rgba(10,10,10,0.98)"
-          : "rgba(0,0,0,0.75)",
+        backgroundColor: "#000000",
         borderBottom: scrolled
           ? "1px solid rgba(201,169,110,0.15)"
           : "none",
@@ -162,7 +160,7 @@ export default function Navbar() {
               >
                 <div
                   style={{
-                    backgroundColor: "rgba(10,10,10,0.98)",
+                    backgroundColor: "#000000",
                     border: "1px solid rgba(201,169,110,0.15)",
                     backdropFilter: "blur(20px)",
                     padding: "8px 0",
@@ -308,7 +306,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen ? (
-        <div className="absolute left-0 right-0 top-full border-t border-white/10 bg-[#0F0F0F] md:hidden">
+        <div className="absolute left-0 right-0 top-full border-t border-white/10 bg-black md:hidden">
           <Link
             href="/"
             className="block px-6 py-4 font-sans text-xs uppercase tracking-[0.15em] text-white/85"
