@@ -141,7 +141,7 @@ export default function HomePage() {
             {[
               { value: "50+", label: "Events Completed" },
               { value: "12hr", label: "Quote Response" },
-              { value: "4", label: "Cities Served" },
+              { value: "9+", label: "Cities Served" },
               { value: "25+", label: "Staff On Call" },
             ].map((stat, i) => (
               <div
@@ -728,7 +728,7 @@ export default function HomePage() {
           >
             {[
               {
-                text: "We hired Event Guru for my daughter&apos;s birthday party — 2 servers for 4 hours. They were on time, friendly, and cleaned up at the end. My guests kept asking where I found them.",
+                text: "We hired Event Guru for my daughter's birthday party — 2 servers for 4 hours. They were on time, friendly, and cleaned up at the end. My guests kept asking where I found them.",
                 name: "Fatima R.",
                 event: "Birthday Party · Mississauga",
               },

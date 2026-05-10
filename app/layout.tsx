@@ -48,8 +48,7 @@ const organizationJsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.youreventguru.ca"),
   title: {
-    default:
-      "Event Guru | Premium Event Staffing & Valet Parking in Toronto",
+    default: "Event Staffing & Valet Parking Toronto | Event Guru",
     template: "%s | Event Guru",
   },
   description:
