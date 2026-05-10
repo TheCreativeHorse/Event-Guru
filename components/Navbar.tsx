@@ -306,26 +306,40 @@ export default function Navbar() {
       </div>
 
       {mobileOpen ? (
-        <div className="absolute left-0 right-0 top-full border-t border-white/10 bg-black md:hidden">
+        <div
+          className="absolute left-0 right-0 top-full z-[1001] max-h-[min(calc(100dvh-88px),100vh)] overflow-y-auto overscroll-contain border-t border-white/15 bg-black md:hidden"
+          style={{ color: "#FFFFFF" }}
+        >
           <Link
             href="/"
-            className="block px-6 py-4 font-sans text-xs uppercase tracking-[0.15em] text-white/85"
-            style={{ fontFamily: "var(--font-inter)" }}
+            className="block border-b border-white/10 px-6 py-4 font-sans text-xs uppercase tracking-[0.15em]"
+            style={{
+              fontFamily: "var(--font-inter)",
+              color: "rgba(255,255,255,0.95)",
+              textDecoration: "none",
+            }}
             onClick={closeMobile}
           >
             Home
           </Link>
           <Link
             href="/portfolio"
-            className="block px-6 py-4 font-sans text-xs uppercase tracking-[0.15em] text-white/85"
-            style={{ fontFamily: "var(--font-inter)" }}
+            className="block border-b border-white/10 px-6 py-4 font-sans text-xs uppercase tracking-[0.15em]"
+            style={{
+              fontFamily: "var(--font-inter)",
+              color: "rgba(255,255,255,0.95)",
+              textDecoration: "none",
+            }}
             onClick={closeMobile}
           >
             Portfolio
           </Link>
           <div
-            className="border-t border-white/10 px-6 py-4 font-sans text-[10px] uppercase tracking-[0.2em] text-white/40"
-            style={{ fontFamily: "var(--font-inter)" }}
+            className="border-b border-white/10 px-6 py-3 font-sans text-[10px] uppercase tracking-[0.22em]"
+            style={{
+              fontFamily: "var(--font-inter)",
+              color: "#C9A96E",
+            }}
           >
             Services
           </div>
@@ -333,8 +347,12 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="block px-6 py-4 pl-10 font-sans text-xs uppercase tracking-[0.12em] text-white/75"
-              style={{ fontFamily: "var(--font-inter)" }}
+              className="block border-b border-white/10 px-6 py-3.5 pl-10 font-sans text-xs uppercase tracking-[0.12em]"
+              style={{
+                fontFamily: "var(--font-inter)",
+                color: "rgba(255,255,255,0.92)",
+                textDecoration: "none",
+              }}
               onClick={closeMobile}
             >
               {item.label}
@@ -342,8 +360,12 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="block border-t border-white/10 px-6 py-4 font-sans text-xs uppercase tracking-[0.15em] text-white/85"
-            style={{ fontFamily: "var(--font-inter)" }}
+            className="block px-6 py-4 font-sans text-xs uppercase tracking-[0.15em]"
+            style={{
+              fontFamily: "var(--font-inter)",
+              color: "rgba(255,255,255,0.95)",
+              textDecoration: "none",
+            }}
             onClick={closeMobile}
           >
             Contact

@@ -75,6 +75,14 @@ body.home-custom-cursor * {
 .hero-bg {
   transform: translateZ(0);
   will-change: transform;
+  background-position: center 40%;
+}
+
+@media (max-width: 767px) {
+  #hero.hero-bg {
+    background-position: center 28%;
+    background-size: cover;
+  }
 }
 
 /* Section divider diamond */

@@ -10,13 +10,11 @@ export default function HomePage() {
       {/* ── HERO ── */}
       <section
         id="hero"
-        className="hero-bg"
+        className="hero-bg min-h-[100dvh] md:min-h-screen"
         style={{
-          minHeight: "100vh",
           backgroundImage:
             "url('/images/events/hero-event-venue-ai.png')",
           backgroundSize: "cover",
-          backgroundPosition: "center 40%",
           position: "relative",
           display: "flex",
           alignItems: "flex-end",
@@ -298,14 +296,13 @@ export default function HomePage() {
               }}
             >
               <div
-                className="home-zoom-wrap"
-                style={{ position: "relative", height: "300px" }}
+                className="home-zoom-wrap relative h-[min(72vw,340px)] md:h-[300px]"
               >
                 <Image
                   src={card.img}
                   alt={card.alt}
                   fill
-                  className="home-zoom-img"
+                  className="home-zoom-img object-[center_22%] md:object-center"
                   style={{ objectFit: "cover" }}
                   sizes="(max-width: 900px) 100vw, 33vw"
                 />

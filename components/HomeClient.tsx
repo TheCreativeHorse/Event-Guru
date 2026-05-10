@@ -64,18 +64,23 @@ export default function HomeClient() {
 
     const hero = document.getElementById("hero");
     const handleParallax = () => {
-      if (hero) {
-        const scroll = window.scrollY;
-        hero.style.backgroundPosition = `center calc(40% + ${scroll * 0.3}px)`;
+      if (!hero) return;
+      if (window.innerWidth < 768) {
+        hero.style.backgroundPosition = "center 28%";
+        return;
       }
+      const scroll = window.scrollY;
+      hero.style.backgroundPosition = `center calc(40% + ${scroll * 0.3}px)`;
     };
     window.addEventListener("scroll", handleParallax, { passive: true });
+    window.addEventListener("resize", handleParallax);
     handleParallax();
 
     return () => {
       document.body.classList.remove("home-custom-cursor");
       document.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("scroll", handleParallax);
+      window.removeEventListener("resize", handleParallax);
       interactive.forEach((el) => {
         el.removeEventListener("mouseenter", addHover);
         el.removeEventListener("mouseleave", removeHover);

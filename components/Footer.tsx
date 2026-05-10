@@ -83,7 +83,7 @@ export function Footer() {
 
       <div className="border-t border-gold/15 py-4">
         <p className="text-center text-xs text-midgrey">
-          © 2025 Event Guru. All rights reserved.
+          © 2026 Event Guru. All rights reserved.
         </p>
       </div>
     </footer>
